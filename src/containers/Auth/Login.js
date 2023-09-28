@@ -4,7 +4,9 @@ import { push } from "connected-react-router";
 import * as actions from "../../store/actions";
 import './Login.scss';
 import { FormattedMessage } from 'react-intl';
-
+import { faHome } from "@fortawesome/free-solid-svg-icons";
+import { faFacebook, faGooglePlusG } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class Login extends Component {
     constructor(props) {
@@ -74,8 +76,9 @@ class Login extends Component {
                             <span className='text-other-login'>Or login with:</span>
                         </div>
                         <div className='col-12 social-login'>
-                            <i className="fa-brands fa-google-plus-g google"></i>
-                            <i class="fa-brands fa-facebook"></i>
+
+                            <FontAwesomeIcon icon={faGooglePlusG} />
+                            <FontAwesomeIcon icon={faFacebook} />
 
 
                         </div>
