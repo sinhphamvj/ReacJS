@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import { push } from "connected-react-router";
 import * as actions from "../../store/actions";
 import './Login.scss';
-import { FormattedMessage } from 'react-intl';
-import { faHome } from "@fortawesome/free-solid-svg-icons";
+//import { FormattedMessage } from 'react-intl';
+
 import { faFacebook, faGooglePlusG } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { handleLoginApi } from '../../services/userService';
@@ -42,7 +42,7 @@ class Login extends Component {
                     errMessage: data.message
                 })
             }
-            if (data && data.errCode == 0) {
+            if (data && data.errCode === 0) {
                 this.props.userLoginSuccess(data.user)
                 console.log('loginsccessd')
             }
