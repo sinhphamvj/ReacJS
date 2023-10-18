@@ -38,6 +38,7 @@ class UserManage extends Component {
 
     createNewUser = async (data) => {
         try {
+            console.log('check data:', data)
             let response = await createNewUserService(data)
             console.log('check res', response)
 

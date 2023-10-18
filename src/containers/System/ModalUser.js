@@ -11,6 +11,8 @@ class ModalUser extends Component {
             password: '',
             firstName: '',
             lastName: '',
+            address: ''
+
         }
     }
     componentDidMount() {
@@ -47,7 +49,7 @@ class ModalUser extends Component {
         if (isValid === true) {
             //call api create modal           
             this.props.createNewUser(this.state, 'abc')
-            // console.log('state', this.state)
+            console.log('check state', this.state)
         }
 
     }
